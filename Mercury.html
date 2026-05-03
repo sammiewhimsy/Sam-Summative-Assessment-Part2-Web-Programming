@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercury</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        header {
+            padding: 20px;
+            background-color: black;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        footer {
+            background-color: black;
+            padding: 40px;
+            color: white;
+        }
+
+        .LineLine {
+            margin-bottom: 40px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgb(13, 91, 91);
+            transition: 0.3s ease;
+        }
+
+        .Menu {
+            padding: 13px 0px 13px;
+        }
+
+        .WhiteText {
+            color: white;
+        }
+
+        .Navigation-bar {
+            display: flex;
+            flex-shrink: 0;
+            padding: 10px;
+            justify-content: center;
+            /* align-content: center; */
+        }
+
+        .Search-bar {
+            padding: 4px;
+        }
+
+        .Footer-Contact {
+            /* display: flex;
+            justify-content: center; */
+            text-align: center;
+        }
+
+        .Footer-Contact-Button {
+            /* margin-top: 13px; */
+            width: 35px;
+            height: 35px;
+            color: white;
+            background-color: black;
+            border-radius: 60px;
+            border: 1px solid;
+            font-size: 20px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .Footer-Contact-Button:hover {
+            background-color: rgb(13, 91, 91);
+            transition: 0.3s ease;
+        }
+
+        .Footer-Content {
+            display: flex;
+            gap: 130px;
+        }
+
+        .Footer-Bottom {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .Footer-Information {
+            font-size: 13px;
+            color: rgb(157, 157, 157);
+            margin-bottom: 5px;
+        }
+
+        .Footer-Information-Name {
+            margin-bottom: 15px;
+        }
+
+        .Footer-Gray-Text {
+            font-size: 13px;
+            color: rgb(157, 157, 157);
+        }
+
+        .Mercury-Information {
+            background-image: url(https://www.nhm.ac.uk/content/dam/nhm-www/discover/mercury-facts/mercury-factfile-v2-full-width.jpg.thumb.960.960.png);
+            height: 90vh;
+            box-shadow: inset 500px 0 80px 70px rgba(0, 0, 0, 0.60);
+        }
+
+        .Mercury-Details {
+            background-color: white;
+            height: 175vh;
+            padding-right: 60px;
+            padding-left: 60px;
+        }
+
+        .Picture {
+            float: right;
+            width: 50%;
+            filter: drop-shadow(1px 2px 3px #444444);
+            margin-left: 50px;
+        }
+
+        @media(max-width:575px) {
+            body {
+                flex-wrap: wrap;
+            }
+        }
+
+        /* .Gallery-Box {
+
+        } */
+
+        .Gallery-Pics {
+            width: 260px;
+            height: 270px;
+        }
+        .Photos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 17px;
+        }
+
+        .Gray-Text {
+            font-size: 13px;
+            font-weight: bold;
+            color: rgb(122, 122, 122);
+        }
+        .Gray-Text:hover {
+            text-decoration: underline;
+        }
+
+        .Link-Hooray {
+            font-weight: bold;
+            color: rgb(74, 31, 126);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="Big Planeterium.html" class="WhiteText"
+            style="font-size: 39px; margin-top: 1px; font-weight: bold;">Big Planeterium</a> &emsp; &emsp; &emsp; &emsp;
+        &emsp; &emsp; &emsp;
+        <nav class="Menu">
+            <a href="#" class="WhiteText">Lesson Resources</a> &emsp;
+            <a href="#" class="WhiteText">About Us</a> &emsp;
+            <a href="#" class="WhiteText">Login</a> &emsp;
+            <input type="text" placeholder="Search" class="Search-bar">
+        </nav>
+    </header>
+    <section>
+        <nav class="Navigation-bar" style="background-color: rgb(36, 36, 36);">
+            <a href="#" class="WhiteText">Planetary Articles</a> &emsp; &emsp;
+            <a href="Planetary Discussions.html" class="WhiteText">Planetary Discussions</a> &emsp; &emsp;
+            <a href="#" class="WhiteText">Videos</a> &emsp; &emsp;
+            <a href="#" class="WhiteText">Podcasts</a> &emsp; &emsp;
+            <a href="#" class="WhiteText">For Everyone</a> &emsp; &emsp;
+            <a href="#" class="WhiteText">For Researchers</a> &emsp; &emsp;
+            <a href="#" class="WhiteText">More</a> &emsp; &emsp;
+        </nav>
+    </section>
+    <section class="Mercury-Information">
+        <h1 class="WhiteText" style="font-size: 80px; padding-left: 30px; padding-top: 155px;">Mercury</h1>
+        <p class="WhiteText" style="padding-left: 30px; padding-top: 10px; line-height: 22px;">The smallest planet in
+            our Solar System while <br> being the closest to the Sun. It is the fastest planet, <br> orbiting the Sun in
+            88 days.</p>
+    </section>
+    <section class="Mercury-Details">
+        <div>
+            <nav style="margin-top: 40px; margin-bottom: 20px;">
+                <a href="#" class="Link-Hooray">Trivia about Merucry</a> &emsp; &emsp;
+                &emsp; <a href="#" class="Link-Hooray">Videos
+                    about Mercury</a> &emsp; &emsp; &emsp; <a href="#"
+                    class="Link-Hooray">Resources</a>
+            </nav>
+            <hr class="LineLine">
+            <img class="Picture" src="https://cdn.mos.cms.futurecdn.net/w3kqDGBSTqVnNTpd5pajWm.jpg">
+            <h1>Mercury</h1>
+            <p style="font-weight: bold; margin-top: 20px; margin-bottom: 20px;">Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Eius aspernatur mollitia blanditiis placeat voluptatem eaque.</p>
+            <p style="text-align: justify;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed doloremque
+                fugiat, magnam quidem nemo molestiae quam maiores repellat rem ipsam voluptate unde quisquam, quis
+                voluptas dolor laudantium, perferendis laborum numquam.</p>
+        </div>
+        <div class="Gallery-Box">
+            <hr class="LineLine" style="margin-top: 140px;">
+            <h1 style="margin-bottom: 15px;">Mercury Gallery</h1>
+            <a href="#" class="Gray-Text">Check out the Merucry gallery!</a>
+            <div class="Photos" style="margin-top: 15px;">
+                <img class="Gallery-Pics" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKH4glv1_rj2alD4Vm_W4Wy0Gi0kdw2aJwbQ&s">
+                <img class="Gallery-Pics" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKH4glv1_rj2alD4Vm_W4Wy0Gi0kdw2aJwbQ&s">
+                <img class="Gallery-Pics" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKH4glv1_rj2alD4Vm_W4Wy0Gi0kdw2aJwbQ&s">
+                <img class="Gallery-Pics" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKH4glv1_rj2alD4Vm_W4Wy0Gi0kdw2aJwbQ&s">
+            </div>
+            <hr class="LineLine" style="margin-top: 50px;">
+            <nav style="margin-top: -10px; margin-bottom: 20px;">
+                <a href="#" class="Link-Hooray">For Kids</a> &emsp; &emsp;
+                &emsp; <a href="#" class="Link-Hooray">For
+                    Researchers</a> &emsp; &emsp; &emsp; <a href="#"
+                    class="Link-Hooray">A Deeper Dive into Mercury</a>
+            </nav>
+        </div>
+    </section>
+    <footer>
+        <div class="Footer-Contact">
+            <h4 style="margin-bottom: 25px;">Follow Us!</h4>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+        </div>
+        <hr class="LineLine" style="margin-top: 30px;">
+        <div class="Footer-Content">
+            <div>
+                <h4 class="Footer-Information-Name">About Us</h4>
+                <nav>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                </nav>
+            </div>
+            <div>
+                <h4 class="Footer-Information-Name">Commentary</h4>
+                <nav>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                </nav>
+            </div>
+            <div>
+                <h4 class="Footer-Information-Name">Lesson Resources</h4>
+                <nav>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                </nav>
+            </div>
+            <div>
+                <h4 class="Footer-Information-Name">Related Sites</h4>
+                <nav>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                </nav>
+            </div>
+            <div>
+                <h4 class="Footer-Information-Name">Help</h4>
+                <nav>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                </nav>
+            </div>
+        </div>
+        <div class="Footer-Bottom">
+            <hr class="LineLine" style="margin-top: 30px;">
+            <h1 class="WhiteText" style="font-size: 39px; margin-top: 3px;">Big Planeterium</h1>
+            <p class="Footer-Gray-Text" style="margin-top: 10px; margin-bottom: 20px;">© Text here Text here Text here
+                Text here Text here. &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                &emsp; &emsp; &emsp; &emsp; &emsp; <a href="#" class="Footer-Gray-Text">Terms of Service</a> &emsp;
+                &emsp; <a href="#" class="Footer-Gray-Text">Privacy Policy</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

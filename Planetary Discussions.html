@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planetary Discussions</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=chat_bubble" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        header {
+            padding: 20px;
+            background-color: black;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        footer {
+            background-color: black;
+            padding: 40px;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgb(13, 91, 91);
+            transition: 0.3s ease;
+        }
+
+        .Menu {
+            padding: 13px 0px 13px;
+        }
+
+        .WhiteText {
+            color: white;
+        }
+
+        .Navigation-bar {
+            display: flex;
+            flex-shrink: 0;
+            padding: 10px;
+            justify-content: center;
+            /* align-content: center; */
+        }
+
+        .Search-bar {
+            padding: 4px;
+        }
+
+        .LineLine {
+            margin-bottom: 40px;
+        }
+
+        .Footer-Contact {
+            /* display: flex;
+            justify-content: center; */
+            text-align: center;
+        }
+
+        .Footer-Contact-Button {
+            /* margin-top: 13px; */
+            width: 35px;
+            height: 35px;
+            color: white;
+            background-color: black;
+            border-radius: 60px;
+            border: 1px solid;
+            font-size: 20px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .Footer-Contact-Button:hover {
+            background-color: rgb(13, 91, 91);
+            transition: 0.3s ease;
+        }
+
+        .Footer-Content {
+            display: flex;
+            gap: 130px;
+        }
+
+        .Footer-Bottom {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .Footer-Information {
+            font-size: 13px;
+            color: rgb(157, 157, 157);
+            margin-bottom: 5px;
+        }
+
+        .Footer-Information-Name {
+            margin-bottom: 15px;
+        }
+
+        .Footer-Gray-Text {
+            font-size: 13px;
+            color: rgb(157, 157, 157);
+        }
+
+        .Discussions-List {
+            background-color: white;
+            height: 85vh;
+            padding: 30px;
+            display: flex;
+            justify-content: space-evenly;
+            gap: 30px;
+            overflow: auto;
+        }
+
+        .User-SideProfile {
+            background-color: white;
+            border: 1.5px solid rgb(13, 91, 91);
+            border-radius: 8px;
+            width: 370px;
+            height: 900px;
+            filter: drop-shadow(1px 7px 8px rgba(188, 188, 188, 0.5));
+            padding: 20px;
+        }
+        .Sample-Discussion-Box {
+            background-color: white;
+            border: 1.5px solid rgb(13, 91, 91);
+            /* border-radius: 8px; */
+            width: 750px;
+            height: 900px;
+            filter: drop-shadow(1px 7px 8px rgba(188, 188, 188, 0.5));
+            padding: 20px;
+            /* overflow: auto; */
+        }
+        .Line-Separator {
+            border: none;
+            margin-right: -20px;
+            margin-left: -20px;
+            margin-top: -20px;
+            margin-bottom: 30px;
+            height: 1.2px;
+            background-color: rgb(13, 91, 91);
+        }
+        .Line-Separator-theSecond {
+            border: none;
+            margin-right: -20px;
+            margin-left: -20px;
+            margin-top: -20px;
+            margin-bottom: 30px;
+            height: 1.5px;
+            background-color: rgb(13, 91, 91);
+        }
+
+        .Discussion-Line {
+            margin-top: 20px;
+        }
+
+        .Sample-Discussion {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 20px;
+        }
+        .ButtonDiscuss {
+            margin-top: 13px;
+            width: 30px;
+            background-color: white;
+            border-radius: 15px;
+            border: 1.5px solid rgb(0,0,0,0.90);
+            font-size: 20px;
+        }
+        .ButtonDiscuss-TheSecond {
+            margin-top: 13px;
+            height: 32px;
+            width: 30px;
+            background-color: white;
+            border-radius: 15px;
+            border: 1.5px solid rgb(0,0,0,0.90);
+            font-size: 16px;
+        }
+        .ButtonDiscuss:hover {
+            background-color: rgb(231, 231, 231);
+            transition: 0.4s ease;
+        }
+        .ButtonDiscuss-TheSecond:hover {
+            background-color: rgb(231, 231, 231);
+            transition: 0.4s ease;
+        }
+
+        .User-Discussion-List {
+            background-color: rgb(192, 192, 192);
+            height: 45vh;
+            padding: 20px;
+            overflow: auto;
+        }
+        .User-Discuss-Box {
+            background-color: white;
+            border: 1.5px solid rgb(13, 91, 91);
+            /* border-radius: 8px; */
+            filter: drop-shadow(1px 7px 8px rgba(188, 188, 188, 0.5));
+            padding: 20px;
+            height: 205px;
+        }
+        .User-Discussion {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 20px;
+        }
+        .User-Input-Discussion {
+            border: 0;
+            padding: 5px;
+            font-size: 15px;
+            width: 100%;
+        }
+        /* .ProfilePicture {
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+        } */
+        .Flexbox-Beam {
+            display: flex;
+            align-items: auto;
+            gap: 10px;
+        }
+        .Time-Posted {
+            color: rgb(120, 120, 120); 
+        } 
+        .Time-Posted:hover {
+            text-decoration: underline;
+            color: rgb(69, 69, 69); 
+        }
+        .More-Discussions {
+            font-size: 20px;
+            border-radius: 5px;
+            color: white;
+            background-color: rgb(63, 63, 63);
+        }
+        .More-Discussions:hover {
+            background-color: rgb(37, 37, 37);
+            transition: 0.3s ease;
+        }
+        .Gray-Link {
+            color: rgb(60, 60, 60);
+        }
+        .Gray-Link:hover {
+            text-decoration: underline;
+        }
+        .Topic-Discussions-List {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 50px;
+            margin-top: 10px;
+            margin-bottom: -1rem; 
+            list-style-type: none;
+        }
+        .Topic-Discussions-List>* {
+            flex: 0 0 20%;
+        }
+        .Topic-Discussions {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="Big Planeterium.html" class="WhiteText"
+            style="font-size: 39px; margin-top: 1px; font-weight: bold;">Big Planeterium</a> &emsp; &emsp; &emsp; &emsp;
+        &emsp; &emsp; &emsp;
+        <nav class="Menu">
+            <a href="#" class="WhiteText">Lesson Resources</a> &emsp;
+            <a href="#" class="WhiteText">About Us</a> &emsp;
+            <a href="#" class="WhiteText">Login</a> &emsp;
+            <input type="text" placeholder="Search" class="Search-bar">
+        </nav>
+    </header>
+    <section>
+        <nav class="Navigation-bar" style="background-color: rgb(36, 36, 36);">
+            <a href="#" class="WhiteText">Planetary Articles</a> &emsp; &emsp;
+            <a href="#" class="WhiteText">Videos</a> &emsp; &emsp;
+            <a href="#" class="WhiteText">Podcasts</a> &emsp; &emsp;
+            <a href="#" class="WhiteText">For Everyone</a> &emsp; &emsp;
+            <a href="#" class="WhiteText">For Researchers</a> &emsp; &emsp;
+            <a href="#" class="WhiteText">More</a> &emsp; &emsp;
+        </nav>
+    </section>
+    <section class="Discussions-List">
+        <div class="Sample-Discussion-Box">
+            <div>
+                <p style="font-weight: bold;"><u>[Username]</u> • Added in <u>[Topic Category]</u></p>
+                <hr class="Discussion-Line">
+                <div class="Sample-Discussion">
+                    <p style="margin-bottom: 5px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, consectetur velit. Omnis possimus quae inventore nisi corrupti velit dolor expedita aspernatur...</p>
+                        <div class="Flexbox-Beam">
+                            <button class="ButtonDiscuss">♡</button>
+                            <button class="ButtonDiscuss-TheSecond
+                        material-symbols-outlined">chat_bubble</button>
+                        <a href="#" class="Time-Posted" style="margin-top: 19px; margin-left: 2px;">Posted X hours ago.</a>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 50px;">
+                <hr class="Line-Separator">
+                <p style="font-weight: bold;"><u>[Username]</u> • Added in  <u>[Topic Category]</u></p>
+                <hr class="Discussion-Line">
+                <div class="Sample-Discussion">           
+                    <p style="margin-bottom: 5px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, consectetur velit. Omnis possimus quae inventore nisi corrupti velit dolor expedita aspernatur...</p>
+                        <div class="Flexbox-Beam">
+                            <button class="ButtonDiscuss">♡</button>
+                            <button class="ButtonDiscuss-TheSecond
+                        material-symbols-outlined">chat_bubble</button>
+                        <a href="#" class="Time-Posted" style="margin-top: 19px; margin-left: 2px;">Posted X hours ago.</a>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 50px;">
+                <hr class="Line-Separator">
+                <p style="font-weight: bold;"><u>[Username]</u> • Added in  <u>[Topic Category]</u></p>
+                <hr class="Discussion-Line">
+                <div class="Sample-Discussion">           
+                    <p style="margin-bottom: 5px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, consectetur velit. Omnis possimus quae inventore nisi corrupti velit dolor expedita aspernatur...</p>
+                        <div class="Flexbox-Beam">
+                            <button class="ButtonDiscuss">♡</button>
+                            <button class="ButtonDiscuss-TheSecond
+                        material-symbols-outlined">chat_bubble</button>
+                        <a href="#" class="Time-Posted" style="margin-top: 19px; margin-left: 2px;">Posted X hours ago.</a>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 50px;">
+                <hr class="Line-Separator" style="height: 1.5px;">
+                <p style="font-weight: bold;"><u>[Username]</u> • Added in  <u>[Topic Category]</u></p>
+                <hr class="Discussion-Line">
+                <div class="Sample-Discussion">           
+                    <p style="margin-bottom: 5px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, consectetur velit. Omnis possimus quae inventore nisi corrupti velit dolor expedita aspernatur...</p>
+                        <div class="Flexbox-Beam">
+                            <button class="ButtonDiscuss">♡</button>
+                            <button class="ButtonDiscuss-TheSecond
+                        material-symbols-outlined">chat_bubble</button>
+                        <a href="#" class="Time-Posted" style="margin-top: 19px; margin-left: 2px;">Posted X hours ago.</a>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 50px;">
+                <hr class="Line-Separator" style="height: 1.5px; margin-bottom: 23px;">
+                <button class="More-Discussions" style="margin-left: 210px;">Show more discussions!</button>
+                </div>
+            </div>
+        </div>
+        <div class="User-SideProfile">
+            <div>
+                <h2>[Your Username]</h2>
+                <hr class="Discussion-Line">
+                <button class="More-Discussions" style="margin-top: 15px; margin-left: 60px;">Share your thoughts!</button>
+                <hr class="Line-Separator-theSecond" style="margin-top: 20px;">
+                <a href="#" class="Gray-Link" style="font-weight: bold;">Top Discussors</a>
+                <hr style="margin-top: 5px;">
+                <p style="margin-top: 15px; margin-left: 15px;">1. [Username]</p>
+                <p style="margin-top: 15px; margin-left: 15px;">2. [Username]</p>
+                <p style="margin-top: 15px; margin-left: 15px;">3. [Username]</p>
+                <p style="margin-top: 15px; margin-left: 15px;">4. [Username]</p>
+                <p style="margin-top: 15px; margin-left: 15px;">5. [Username]</p>
+                <p style="margin-top: 15px; margin-left: 15px;">6. [Username]</p>
+                <p style="margin-top: 15px; margin-left: 15px;">7. [Username]</p>
+                <p style="margin-top: 15px; margin-left: 15px;">8. [Username]</p>
+                <p style="margin-top: 15px; margin-left: 15px;">9. [Username]</p>
+                <p style="margin-top: 15px; margin-left: 15px;">10. [Username]</p>
+                <hr class="Line-Separator-theSecond" style="margin-top: 20px;">
+                <a href="#" class="Gray-Link" tyle="font-weight: bold;">Top Group Discussions</a>
+                <hr style="margin-top: 5px;">
+                <p style="margin-top: 15px; margin-left: 15px;">1. [Group Name]</p>
+                <p style="margin-top: 15px; margin-left: 15px;">2. [Group Name]</p>
+                <p style="margin-top: 15px; margin-left: 15px;">3. [Group Name]</p>
+                <p style="margin-top: 15px; margin-left: 15px;">4. [Group Name]</p>
+                <p style="margin-top: 15px; margin-left: 15px;">5. [Group Name]</p>
+                <p style="margin-top: 15px; margin-left: 15px;">6. [Group Name]</p>
+                <p style="margin-top: 15px; margin-left: 15px;">7. [Group Name]</p>
+                <p style="margin-top: 15px; margin-left: 15px;">8. [Group Name]</p>
+            </div>
+        </div>
+    </section>
+    <section class="User-Discussion-List">
+        <div class="User-Discuss-Box">
+            <a href="#" class="Gray-Link" style="font-weight: bold;">Top Discussion Topics</a>
+            <hr class="Discussion-Line">
+            <!-- <div class="User-Discussion">
+                <input type="text" placeholder="Type here..." class="User-Input-Discussion">
+            </div> -->
+            <ul class="Topic-Discussions-List">
+                <li class="Topic-Discussions">
+                    <div>
+                        <a href="#" class="Gray-Link">[Discussion Name]</a>
+                    </div>
+                </li>
+                <li class="Topic-Discussions">
+                    <div>
+                        <a href="#" class="Gray-Link">[Discussion Name]</a>
+                    </div>
+                </li>
+                <li class="Topic-Discussions">
+                    <div>
+                        <a href="#" class="Gray-Link">[Discussion Name]</a>
+                    </div>
+                </li>
+                <li class="Topic-Discussions">
+                    <div>
+                        <a href="#" class="Gray-Link">[Discussion Name]</a>
+                    </div>
+                </li>
+                <li class="Topic-Discussions">
+                    <div>
+                        <a href="#" class="Gray-Link">[Discussion Name]</a>
+                    </div>
+                </li>
+                <li class="Topic-Discussions">
+                    <div>
+                        <a href="#" class="Gray-Link">[Discussion Name]</a>
+                    </div>
+                </li>
+                <li class="Topic-Discussions">
+                    <div>
+                        <a href="#" class="Gray-Link">[Discussion Name]</a>
+                    </div>
+                </li>
+                <li class="Topic-Discussions">
+                    <div>
+                        <a href="#" class="Gray-Link">[Discussion Name]</a>
+                    </div>
+                </li>
+                <li class="Topic-Discussions">
+                    <div>
+                        <a href="#" class="Gray-Link">[Discussion Name]</a>
+                    </div>
+                </li>
+                <li class="Topic-Discussions">
+                    <div>
+                        <a href="#" class="Gray-Link">[Discussion Name]</a>
+                    </div>
+                </li>
+                <li class="Topic-Discussions">
+                    <div>
+                        <a href="#" class="Gray-Link">[Discussion Name]</a>
+                    </div>
+                </li>
+                <li class="Topic-Discussions">
+                    <div>
+                        <a href="#" class="Gray-Link">[Discussion Name]</a>
+                    </div>
+                </li>
+                <li class="Topic-Discussions">
+                    <div>
+                        <a href="#" class="Gray-Link">[Discussion Name]</a>
+                    </div>
+                </li>
+                <li class="Topic-Discussions">
+                    <div>
+                        <a href="#" class="Gray-Link">[Discussion Name]</a>
+                    </div>
+                </li>
+                <li class="Topic-Discussions">
+                    <div>
+                        <a href="#" class="Gray-Link">[Discussion Name]</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <div class="Footer-Contact">
+            <h4 style="margin-bottom: 25px;">Follow Us!</h4>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+        </div>
+        <hr class="LineLine" style="margin-top: 30px;">
+        <div class="Footer-Content">
+            <div>
+                <h4 class="Footer-Information-Name">About Us</h4>
+                <nav>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                </nav>
+            </div>
+            <div>
+                <h4 class="Footer-Information-Name">Commentary</h4>
+                <nav>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                </nav>
+            </div>
+            <div>
+                <h4 class="Footer-Information-Name">Lesson Resources</h4>
+                <nav>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                </nav>
+            </div>
+            <div>
+                <h4 class="Footer-Information-Name">Related Sites</h4>
+                <nav>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                </nav>
+            </div>
+            <div>
+                <h4 class="Footer-Information-Name">Help</h4>
+                <nav>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                </nav>
+            </div>
+        </div>
+        <div class="Footer-Bottom">
+            <hr class="LineLine" style="margin-top: 30px;">
+            <h1 class="WhiteText" style="font-size: 39px; margin-top: 3px;">Big Planeterium</h1>
+            <p class="Footer-Gray-Text" style="margin-top: 10px; margin-bottom: 20px;">© Text here Text here Text here
+                Text here Text here. &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                &emsp; &emsp; &emsp; &emsp; &emsp; <a href="#" class="Footer-Gray-Text">Terms of Service</a> &emsp;
+                &emsp; <a href="#" class="Footer-Gray-Text">Privacy Policy</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

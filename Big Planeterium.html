@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Planeterium</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        header {
+            padding: 20px;
+            background-color: black;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        footer {
+            background-color: black;
+            padding: 40px;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgb(13, 91, 91);
+            transition: 0.3s ease;
+        }
+
+        .WhiteText {
+            color: white;
+        }
+
+        .Menu {
+            padding: 13px 0px 13px;
+        }
+
+        .Search-bar {
+            padding: 4px;
+        }
+
+        .Navigation-bar {
+            display: flex;
+            flex-shrink: 0;
+            padding: 10px;
+            justify-content: center;
+        }
+
+        .Footer-Contact {
+            text-align: center;
+        }
+
+        .Footer-Contact-Button {
+            /* margin-top: 13px; */
+            width: 35px;
+            height: 35px;
+            color: white;
+            background-color: black;
+            border-radius: 60px;
+            border: 1px solid;
+            font-size: 20px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .Footer-Contact-Button:hover {
+            background-color: rgb(13, 91, 91);
+            transition: 0.3s ease;
+        }
+
+        .Footer-Content {
+            display: flex;
+            gap: 130px;
+            flex-wrap: wrap;
+        }
+
+        .Footer-Bottom {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .Footer-Information {
+            font-size: 13px;
+            color: rgb(157, 157, 157);
+            margin-bottom: 5px;
+        }
+
+        .Footer-Information-Name {
+            margin-bottom: 15px;
+        }
+
+        .Footer-Gray-Text {
+            font-size: 13px;
+            color: rgb(157, 157, 157);
+        }
+
+        .BP-section {
+            background-image: url(https://static.scientificamerican.com/sciam/cache/file/B5A67C1C-08B8-4FB1-A454CD0B9CF16C2C_source.jpeg?w=1350);
+            height: 85vh;
+            box-shadow: inset 500px 0 80px 70px rgba(0, 0, 0, 0.60);
+            overflow: auto;
+        }
+
+        .MilkyWayOverview-Section {
+            background: white;
+            padding: 60px;
+            min-height: 95vh;
+        }
+
+        .LineLine {
+            margin-bottom: 40px;
+        }
+
+        .Picture {
+            float: right;
+            width: 50%;
+            filter: drop-shadow(1px 2px 3px #444444);
+            margin-left: 50px;
+        }
+
+        @media(max-width:575px) {
+            body {
+                flex-wrap: wrap;
+            }
+        }
+
+        .Planets-List {
+            background-color: black;
+            height: 95vh;
+            padding: 35px;
+        }
+
+        .Planet-Avatar {
+            width: 85px;
+            height: 85px;
+        }
+
+        .Planets-Box {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            margin-bottom: -1rem;   
+        }
+
+        .Planets-Box>* {
+            flex: 0 0 25%;
+        }
+
+        .Planet-Image {
+            display: flex;
+            align-items: center;
+        }
+
+        .Planet-Hover:hover {
+            text-decoration: underline;
+            transition: 0.4s ease;
+            color: white;
+        }
+
+        .Link-Hooray {
+            font-weight: bold;
+            color: rgb(74, 31, 126);
+            text-decoration: underline;
+        }
+
+        .Purely-A-Button {
+            height: 10vh;
+            background-color: black;
+            text-align: center;
+        }
+
+        .A-Button {
+            height: 30px;
+            width: 130px;
+            font-size: 20px;
+            border-radius: 10px;
+            background-color: black;
+            color: white; 
+            border: 1px solid;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <p class="WhiteText" style="font-size: 39px; margin-top: 1px; font-weight: bold;">Big Planeterium</p> &emsp;
+        &emsp; &emsp; &emsp;
+        &emsp; &emsp; &emsp;
+        <nav class="Menu">
+            <a href="#" class="WhiteText">Lesson Resources</a> &emsp;
+            <a href="#" class="WhiteText">About Us</a> &emsp;
+            <a href="#" class="WhiteText">Login</a> &emsp;
+            <input type="text" placeholder="Search" class="Search-bar">
+        </nav>
+    </header>
+    <section>
+        <nav class="Navigation-bar" style="background-color: rgb(36, 36, 36);">
+            <a href="#" class="WhiteText">Planetary Articles</a> &emsp; &emsp;
+            <a href="Planetary Discussions.html" class="WhiteText">Planetary Discussions</a> &emsp; &emsp;
+            <a href="#" class="WhiteText">Videos</a> &emsp; &emsp;
+            <a href="#" class="WhiteText">Podcasts</a> &emsp; &emsp;
+            <a href="#" class="WhiteText">For Everyone</a> &emsp; &emsp;
+            <a href="#" class="WhiteText">For Researchers</a> &emsp; &emsp;
+            <a href="#" class="WhiteText">More</a> &emsp; &emsp;
+        </nav>
+    </section>
+    <section class="BP-section">
+        <h1 class="WhiteText" style="font-size: 80px; padding-left: 30px; padding-top: 90px;">Big <br> Planeterium</h1>
+        <p class="WhiteText" style="padding-left: 30px; padding-top: 10px; line-height: 22px; margin-bottom: 100px;">We’re a Bristol-based
+            planetarium, and we
+            love space! We are <br>predominantly an educational
+            organisation, offering educational <br>entertainment for the public and for schools.</p>
+    </section>
+    <section class="MilkyWayOverview-Section">
+        <hr class="LineLine"> 
+        <div>
+            <img class="Picture" src="https://cdn.mos.cms.futurecdn.net/ZREypanfg3GboyC8knCLPF.jpg">
+            <h1>The Milky Way</h1>
+            <p style="font-weight: bold; margin-top: 20px; margin-bottom: 20px;">The Milky Way is our home galaxy that
+                is a huge collection of stars, dust, and gas.</p>
+            <p style="text-align: justify;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed doloremque
+                fugiat, magnam quidem nemo molestiae quam maiores repellat rem ipsam voluptate unde quisquam, quis
+                voluptas dolor laudantium, perferendis laborum numquam.</p>
+            <nav style="margin-top: 20px; margin-bottom: 20px;">
+                <a href="The Milky Way.html" class="Link-Hooray">Learn more about the Milky Way!</a>
+            </nav>
+        </div>
+    </section>
+    <section class="Planets-List">
+        <h1 class="WhiteText" style="margin-left: 30px">Planets in our Solar System!</h1>
+        <hr class="LineLine" style="margin-top: 30px; margin-left: 22px; margin-right: 22px;">
+        <ul class="Planets-Box" style="margin-left: 75px;">
+            <li>
+                <div class="Specific-Planet">
+                    <a href="Mercury.html" class="Planet-Hover">
+                        <div class="Planet-Image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Mercury_Globe-MESSENGER_mosaic_centered_at_0degN-0degE.jpg/1280px-Mercury_Globe-MESSENGER_mosaic_centered_at_0degN-0degE.jpg"
+                                alt="Mercury" class="Planet-Avatar" style="margin-left: -3px;">
+                        </div>
+                        <div>
+                            <h3 class="WhiteText">Mercury</h3>
+                            <p class="WhiteText">The smallest planet.</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="Specific-Planet">
+                    <a href="Venus.html" class="Planet-Hover">
+                        <div class="Planet-Image">
+                            <img src="https://th-thumbnailer.cdn-si-edu.com/Wxt4b26lmnBPX1H1SNlW2brLr9w=/1280x1280/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/28/44/28444db2-09c1-4c30-bb1b-6f55894d9cdb/2020_apr27_venus.jpg"
+                                alt="Venus" class="Planet-Avatar" style="margin-left: -5px;">
+                        </div>
+                        <div>
+                            <h3 class="WhiteText">Venus</h3>
+                            <p class="WhiteText">The hottest planet.</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="Specific-Planet">
+                    <a href="#" class="Planet-Hover">
+                        <div class="Planet-Image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Meteosat-12-fci-march-equinox-2025-noon.jpg/1280px-Meteosat-12-fci-march-equinox-2025-noon.jpg"
+                                alt="Earth" class="Planet-Avatar" style="margin-left: -5px;">
+                        </div>
+                        <div>
+                            <h3 class="WhiteText">Earth</h3>
+                            <p class="WhiteText">Our home planet.</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="Specific-Planet">
+                    <a href="#" class="Planet-Hover">
+                        <div class="Planet-Image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/OSIRIS_Mars_true_color.jpg/1280px-OSIRIS_Mars_true_color.jpg"
+                                alt="Mars" class="Planet-Avatar" style="margin-left: -10px;">
+                        </div>
+                        <div>
+                            <h3 class="WhiteText">Mars</h3>
+                            <p class="WhiteText">The Red Planet.</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="Specific-Planet" style="margin-top: 50px;">
+                    <a href="#" class="Planet-Hover">
+                        <div class="Planet-Image">
+                            <img src="https://assets.science.nasa.gov/content/dam/science/missions/hubble/releases/2017/04/STScI-01EVVBMWC13FRMRK0MDY9MTBDR.tif/jcr:content/renditions/cq5dam.web.1280.1280.jpeg"
+                                alt="Jupiter" class="Planet-Avatar" style="width: 100px; height: 100px; margin-left: -5px;">
+                        </div>
+                        <div>
+                            <h3 class="WhiteText">Jupiter</h3>
+                            <p class="WhiteText">The largest planet.</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="Specific-Planet" style="margin-top: 50px;">
+                    <a href="#" class="Planet-Hover">
+                        <div class="Planet-Image">
+                            <img src="https://cdn.pixabay.com/photo/2021/04/05/15/53/saturn-6153860_1280.png"
+                                alt="Saturn" class="Planet-Avatar" style="width: 100px; height: 100px; margin-left: -5px;">
+                        </div>
+                        <div>
+                            <h3 class="WhiteText">Saturn</h3>
+                            <p class="WhiteText">The planet with rings.</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="Specific-Planet" style="margin-top: 50px;">
+                    <a href="#" class="Planet-Hover">
+                        <div class="Planet-Image">
+                            <img src="https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia18/pia18182/PIA18182.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg"
+                                alt="Uranus" class="Planet-Avatar" style="width: 90px; height: 90px; margin-left: -8px; margin-top: 10px;">
+                        </div>
+                        <div>
+                            <h3 class="WhiteText">Uranus</h3>
+                            <p class="WhiteText">The side-ways planet.</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="Specific-Planet" style="margin-top: 50px;">
+                    <a href="#" class="Planet-Hover">
+                        <div class="Planet-Image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Neptune_Full.jpg/1280px-Neptune_Full.jpg"
+                                alt="Neptune" class="Planet-Avatar" style="width: 90px; height: 90px; margin-left: -8px; margin-top: 10px;">
+                        </div>
+                        <div>
+                            <h3 class="WhiteText">Neptune</h3>
+                            <p class="WhiteText">The coldest planet.</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <!-- <section style="height: 2px; color: white;"></section> -->
+    <section class="Purely-A-Button">
+        <button class="A-Button" onclick="toTop()">Back to top!</button>
+    </section>
+    <section style="height: 2px; color: white;"></section>
+    <footer>
+        <div class="Footer-Contact">
+            <h4 style="margin-bottom: 25px; margin-top: 8px;">Follow Us!</h4>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+            <button class="Footer-Contact-Button">X</button>
+        </div>
+        <hr class="LineLine" style="margin-top: 30px;">
+        <div class="Footer-Content">
+            <div>
+                <h4 class="Footer-Information-Name">About Us</h4>
+                <nav>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                </nav>
+            </div>
+            <div>
+                <h4 class="Footer-Information-Name">Commentary</h4>
+                <nav>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                </nav>
+            </div>
+            <div>
+                <h4 class="Footer-Information-Name">Lesson Resources</h4>
+                <nav>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                </nav>
+            </div>
+            <div>
+                <h4 class="Footer-Information-Name">Related Sites</h4>
+                <nav>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                </nav>
+            </div>
+            <div>
+                <h4 class="Footer-Information-Name">Help</h4>
+                <nav>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                    <a href="#" class="Footer-Information">Link Name Here.</a> <br>
+                </nav>
+            </div>
+        </div>
+        <div class="Footer-Bottom">
+            <hr class="LineLine" style="margin-top: 30px;">
+            <h1 class="WhiteText" style="font-size: 39px; margin-top: 3px;">Big Planeterium</h1>
+            <p class="Footer-Gray-Text" style="margin-top: 10px; margin-bottom: 20px;">© Text here Text here Text here
+                Text here Text here. &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                &emsp; &emsp; &emsp; &emsp; &emsp; <a href="#" class="Footer-Gray-Text">Terms of Service</a> &emsp;
+                &emsp; <a href="#" class="Footer-Gray-Text">Privacy Policy</a></p>
+        </div>
+    </footer>
+    <script>
+        const toTop = () => window.scrollTo({top:0, behavior: 'smooth'})
+    </script>
+</body>
+
+</html>
